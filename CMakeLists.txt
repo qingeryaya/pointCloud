@@ -28,3 +28,8 @@ target_link_libraries(ply_io_example ${PCL_LIBRARIES})
 add_executable(obj_io_example PCL_IO/OBJ_IO.cpp)
 # 链接PCL相关库
 target_link_libraries(obj_io_example ${PCL_LIBRARIES})
+
+# 添加可执行文件 OBJ
+add_executable(obj_viewer PCL_IO2/PCL_VIEWER.cpp)
+# 链接PCL相关库
+target_link_libraries(obj_viewer ${PCL_LIBRARIES})
