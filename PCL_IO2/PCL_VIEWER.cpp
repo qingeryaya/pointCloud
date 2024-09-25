@@ -15,7 +15,7 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);		
 pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_rgb(new pcl::PointCloud<pcl::PointXYZRGB>);			// 彩色点云
 pcl::PointCloud<pcl::Normal>::Ptr cloud_normals_1(new pcl::PointCloud <pcl::Normal>);				// 法向量1
 pcl::PointCloud<pcl::Normal>::Ptr cloud_normals_2(new pcl::PointCloud <pcl::Normal>);				// 法向量2
-pcl::visualization::PCLVisualizer::Ptr viewer(new pcl::visualization::PCLVisualizer("3D Viewer"));	// 可视化浏览器
+pcl::visualization::PCLVisualizer::Ptr viewer = nullptr;	// 可视化浏览器
 
 
 // 生成数据
@@ -196,6 +196,7 @@ void cloud_viewer() {
 
 
 int main() {
+        viewer.reset(new pcl::visualization::PCLVisualizer("3D Viewer"));
 	// 01 生成示范点云
 	make_data();
 
