@@ -34,3 +34,7 @@ target_link_libraries(pcl_viewer ${PCL_LIBRARIES})
 # PCL_IO3  选取点云上的单个点
 add_executable(pcl_single_point_select PCL_IO3/singlePointCloudSelect.cpp)
 target_link_libraries(pcl_single_point_select ${PCL_LIBRARIES})
+
+# PCL_IO3  选取点云上的单个点
+add_executable(pcl_roi_select PCL_IO3/pointCloudROISelect.cpp)
+target_link_libraries(pcl_roi_select ${PCL_LIBRARIES})
